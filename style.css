@@ -1,3 +1,16 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--mood-color-1: #2d6b5f;
+	--mood-color-2: #72e3a6;
+	--mood-color-3: #dff4c7;
+	--mood-color-4: #edbf98;
+	--mood-color-5: #ea3d36;
+}
+
+
 body{
     background-color: #f2f2f2;
     text-align: center;
@@ -5,4 +18,25 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.mood {
+	background-color: #fff;
+	border: 0;
+	border-radius: 50%;
+	color: #000;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	line-height: 20px;
+	padding: 0;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+}
+
+.mood-happy {
+	color: var(--mood-color-1);
 }
