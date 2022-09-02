@@ -13,7 +13,7 @@ let months = [
     'november',
     'december'
 ]
-let weekdays = [
+let weekDays = [
     'sunday',
     'monday',
     'tuesday',
@@ -23,3 +23,17 @@ let weekdays = [
     'saturday'
 ]
 
+const calendar = document.querySelector('.calendar');
+
+months.forEach((month, idx) => {
+	monthsHTML += `<div class="months month_${idx}">
+        <h3>${month}</h3>
+        <div class="week_days_container">
+            ${weekDays
+				.map(day => `<div class="week_days">${day}</div>`)
+				.join('')}
+        </div>
+        <div class="days_container"></div>
+    </div>`;
+});
+calendar.innerHTML = monthsHTML;
