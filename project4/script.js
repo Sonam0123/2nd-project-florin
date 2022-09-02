@@ -6,11 +6,7 @@ const textbox = document.querySelector('#textbox');
 
 class State{
     constructor(){
-        this.suggestions = [];
         this.text = '';
-    }
-    updateSuggestions(suggestions){
-        this.suggestions = suggestions;
     }
     updateText(text){
         this.text = text;
@@ -18,11 +14,14 @@ class State{
 }
 
 window.onload = function() {
-    textbox.addEventListener("input", function() {
-        const state = new State();
-        state.updateText(textbox.value);
-        console.log(state)
-    })
+        textbox.addEventListener("keypress", function(e) {
+            if (e.key === 'Enter') {
+                const state = new State();
+                state.updateText(textbox.value);
+                console.log(state)
+                suggestions.innterHTML += `<div>${state}</div>`;
+            }
+        });
 };
 
 
