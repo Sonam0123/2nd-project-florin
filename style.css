@@ -36,7 +36,9 @@ body{
 	width: 40px;
 	text-align: center;
 }
-
+.mood{
+    cursor: pointer;
+}
 .mood-happy {
 	color: var(--mood-color-1);
 }
